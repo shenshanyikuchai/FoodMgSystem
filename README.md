@@ -21,7 +21,7 @@
 + 查询数据
 + 分页功能
 
-#### AIP
+#### API
 
 > [文档连接](https://github.com/jvtcit/FoodMgSystem/tree/master/apidoc)
 
