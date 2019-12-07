@@ -1,3 +1,6 @@
+# FoodMgSystem
+用nodejs写简易后台管理系统的项目
+
 ### 简单的后台管理系统
 
 #### 开发环境
@@ -9,7 +12,6 @@
     - path 拼接文件路径
     - body-parser 解析传输数据
     - mongoose 连接操作数据库
-+ 数据库 mongoDB
 
 
 #### 功能模块
@@ -19,10 +21,10 @@
 + 查询数据
 + 分页功能
 
-#### AIP
+#### API
 
-> [文档连接](node04\apiDoc)
+> [文档连接](https://github.com/jvtcit/FoodMgSystem/tree/master/apidoc)
 
 #### 数据库 mongodb
 
-> [导出文件](sql\foods.json)
+> [导出文件](https://github.com/jvtcit/FoodMgSystem/tree/master/sql)
