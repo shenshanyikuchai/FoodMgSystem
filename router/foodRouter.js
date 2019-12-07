@@ -57,13 +57,13 @@ router.post('/postAdd', (req,res)=>{  //添加菜品
  * @apiSuccess {Array} data 返回查询到的数据
  */
 router.post('/postFind', (req,res)=>{
-    let {name,typename} = req.body;
+    let {key} = req.body;
     let indexObj = {};//若没有参数则进行全查询
-    if(name){ 
-        indexObj.name = name;
-    }
-    if(typename){ 
-        indexObj.typename = typename;
+    if(key){
+        let keyRex = new RegExp(key); //模糊查询
+        indexObj = {$or:[{name:{$regex:keyRex}},{desc:{$regex:keyRex}},
+                    {typename:{$regex:keyRex}},{price:{$regex:keyRex}},
+                    {typeid:{$regex:keyRex}}]};
     }
     food.find(indexObj).then((data)=>{
         res.send(data);
@@ -85,8 +85,9 @@ router.post('/postFind', (req,res)=>{
  */
 
 router.post('/postRemove',(req,res)=>{
-    let {name} = req.body;
-    food.remove({name})
+    let {nameObj} = req.body;
+    nameObj = JSON.parse(nameObj);
+    food.remove({name:nameObj.names})
     .then((data)=>{
         res.send(data);
     }).catch((err)=>{

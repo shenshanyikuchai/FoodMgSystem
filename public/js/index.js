@@ -53,14 +53,14 @@ var table = new Vue({
                 }
             });
         },
-        remove: (name)=>{//删除数据库数据
+        remove: (nameObj)=>{//删除数据库数据
             $.ajax({
                 type:"POST",
                 url:'http://localhost:3000/food/postRemove',
-                data:{name},
+                data:{nameObj},
                 success: (data)=>{
                     if(data.ok == 1){
-                        console.log(name + "删除成功");
+                        console.log(nameObj + "删除成功");
                     }
                 }
             })

@@ -10,10 +10,9 @@ function remove(){
             names.push(addname);
         }
     }
-    // 先循环删除已选数据后更新页
-    for(let i = 0; i < names.length;i++){ //用postremover接口删除数据
-        let name = names[i];
-        table.remove(name);
-    }
+    // 删除已选数据后更新页
+    let nameObj = JSON.stringify({names});
+    table.remove(nameObj);
+    // 更新数据
     table.find();
 }
