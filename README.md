@@ -18,7 +18,7 @@
 + 添加元组
 + 删除一到多个元组
 + 修改元组中的一到多个字段
-+ 查询数据
++ 使用模糊查询查询数据
 + 分页功能
 
 #### API
@@ -27,8 +27,4 @@
 
 #### 数据库 mongodb
 
-<<<<<<< HEAD:README.md
 > [导出文件](https://github.com/jvtcit/FoodMgSystem/tree/master/sql)
-=======
-> [导出文件](https://github.com/jvtcit/FoodMgSystem/tree/master/sql)
->>>>>>> 93538b878bd9f99f98095ed096bdcdc622ce2293:简易后台管理系统.md
